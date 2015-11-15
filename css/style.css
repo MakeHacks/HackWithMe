@@ -32,13 +32,34 @@ body#background {
   color: #fff;
 }
 
+#jumbotron {
+  margin-top: 14%;
+  margin-right: 1%;
+  background: rgba(0, 0, 0 , 0.7);
+  padding: 1% 1% 2% 1%;
+}
+
+#jumbotron h1 span {
+  padding: 5px 16px 5px 7px;
+  background-color: rgba(36, 42, 75, 0.7);
+  color: #4db6ac;
+}
+
 #register {
   background-color: #000;
   padding: 1% 2% 2% 2%;
 }
 
 #login-register {
-  margin-top: 15%;
+  margin-top: 14%;
   text-align: center;
   padding: 2%;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+span .medium {
+  font-weight: 400;
 }
