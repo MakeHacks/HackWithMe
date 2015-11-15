@@ -31,3 +31,7 @@ body#background {
 #login {
   color: #fff;
 }
+
+#register {
+  background-color: #000;
+}
