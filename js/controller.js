@@ -3,6 +3,18 @@
 angular.module('app').controller("MainController", function(){
 	var vm = this;
 	vm.searchInput = '';
+	vm.hackathonInput = '';
+	vm.hackathonList = [	
+		{
+			name: 'HackingEDU'
+		},
+		{
+			name: 'TeenTechSF'
+		},
+		{
+			name: 'MakeHacks'
+		}
+	];
 	vm.people = [
 		{
 			name: 'John Doe',
@@ -13,7 +25,10 @@ angular.module('app').controller("MainController", function(){
 			github: 'johndoe12345',
             email: 'johndoe@johndoe.com',
             phone: '555-555-5555',
-            distance: 50
+            distance: 50,
+            hackathons: [
+            	'HackingEDU', 'TeenTechSF'
+            ]
 		},
               
 		{
@@ -25,8 +40,10 @@ angular.module('app').controller("MainController", function(){
 			github: 'bsmith123123',
           	email: 'bsmith12345@gmail.com',
           	phone: '555-555-5555',
-         	distance: 11
-
+         	distance: 11,
+         	hackathons: [
+            	'MakeHacks', 'TeenTechSF'
+            ]
 		},
               
               {
@@ -38,7 +55,10 @@ angular.module('app').controller("MainController", function(){
 			github: 'jjstone111222',
             email: 'jjstone111222@hotmail.com',
             phone: '555-555-5555',
-            distance: 9
+            distance: 9,
+            hackathons: [
+            	'HackingEDU'
+            ]
 		},
               
               {
@@ -50,7 +70,10 @@ angular.module('app').controller("MainController", function(){
 			github: '',
           	email: '',
           	phone: '555-555-5555',
-          	distance: 3
+          	distance: 3,
+          	hackathons: [
+            	'TeenTechSF'
+            ]
 		},
               
               {
@@ -62,7 +85,10 @@ angular.module('app').controller("MainController", function(){
 			github: '',
          	email: '',
          	phone: '555-555-5555',
-          	distance: 18
+          	distance: 18,
+          	hackathons: [
+            	'HackingEDU', 'MakeHacks', 'TeenTechSF'
+            ]
 		},
               {
 			name: 'George J. Blake',
@@ -73,7 +99,10 @@ angular.module('app').controller("MainController", function(){
 			github: '',
          	email: '',
           	phone: '555-555-5555',
-          	distance: 30
+          	distance: 30,
+          	hackathons: [
+            	'HackingEDU', 'MakeHacks', 'TeenTechSF'
+            ]
 		},
               
               {
@@ -85,7 +114,10 @@ angular.module('app').controller("MainController", function(){
 			github: 'BAcodeweb01010',
           	email: 'ben@benejaminarnold.net',
           	phone: '555-555-5555',
-          	distance: 20
+          	distance: 20,
+          	hackathons: [
+            	'HackingEDU'
+            ]
 		},
               {
 			name: 'Lauren Cooper',
@@ -96,7 +128,10 @@ angular.module('app').controller("MainController", function(){
 			github: 'Lcooperrr',
           	email: 'lauren.cooper@gmail.com',
           	phone: '555-555-5555',
-          	distance: 7
+          	distance: 7,
+          	hackathons: [
+            	'TeenTechSF'
+            ]
 		},
               
               {
@@ -108,15 +143,13 @@ angular.module('app').controller("MainController", function(){
 			github: 'lockandkey51',
           	email: 'james.key@student.owsd.us',
          	phone: '555-555-5555',
-          	distance: 6
+          	distance: 6,
+          	hackathons: [
+            	'MakeHacks', 'TeenTechSF'
+            ]
 		},
               
 
               
 	];
-});
-
-angular.module('app').controller("MainController", function(){
-	var vm = this;
-	vm.searchInput = 'Test';
 });
