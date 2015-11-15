@@ -26,7 +26,8 @@
       };
       map = new google.maps.Map($('#map')[0], myOptions);
 
-      var cities = ["San Jose", "Sacramento", "Mountain View", "Sunnyvale", "Cupertino", "Roseville", "Oakland", "Elk Grove", "Plesanton"];
+      var cities = ["San Jose", "Sacramento", "Mountain View", "Sunnyvale", "Cupertino", "Roseville", "Oakland California", "Elk Grove", "Plesanton", "San Mateo", "Palo Alto", "Davis"];
+      var names= ["John Doe", "Justin Wu", "Joseph Stone", "Stephanie Blossom", "Jonah Smith", "George Blake", "Benjamin Arnold", "Lauren Cooper", "James Key", "Tom Tucker", "Raj Patel", "Cindy Lopez"];
 
       for (var x = 0; x < cities.length; x++) {
           $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+cities[x]+'&sensor=false', null, function (data) {
@@ -34,7 +35,8 @@
               var latlng = new google.maps.LatLng(p.lat, p.lng);
               new google.maps.Marker({
                   position: latlng,
-                  map: map
+                  map: map,
+                  title: names[x]
               });
 
           });
@@ -53,7 +55,7 @@
        <ul class="right hide-on-med-and-down">
          <li class="red darken-3 waves-effect waves-light"><a href="maps.html" class="waves-effect waves-light"><i class="material-icons left">person_pin</i>Maps</a></li>
          <li class="waves-effect waves-light"><a href="people.html"><i class="material-icons left">view_module</i>Members</a></li>
-         <li class="waves-effect waves-light"><a href="#" class="waves-effect waves-light"><i class="material-icons left">picture_in_picture</i>Profile</a></li>
+         <li class="waves-effect waves-light"><a href="profile.html" class="waves-effect waves-light"><i class="material-icons left">picture_in_picture</i>Profile</a></li>
          <li class="waves-effect waves-light"><a href="login.html"><i class="material-icons left">done</i>Log Out</a></li>
        </ul>
        <ul id="nav-mobile" class="side-nav">
