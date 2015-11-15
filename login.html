@@ -11,11 +11,11 @@
   <body ng-app="app" ng-controller="MainController as main" id="background">
   <div class="wrapper" id="login">
     <div class="row">
-      <div class="col s5 offset-s1" style="margin-top: 10%;">
-        <h1 class="center-align">HackWith<b><i>Me</i></b></h1>
-        <h5 class="center-align">A modern war to connect hacking enthusiasts by helping them comminucate ahead of hackathons. Use HackWithMe to create a dynamic team and find others living nearby to carpool to hackathons!</h5>
-        <h1 style="text-align: center;">Hackwithme</h1>
+      <div class="col s5 offset-s1" id="jumbotron">
+        <h1 class="center-align"><span class="thin">HackWith<b><i>Me</i></b></span></h1>
+        <h5 class="center-align"><span class="thin">A modern war to </span><b>connect</b><span class="thin"> hacking enthusiasts by helping them </span><b>comminucate</b><span class="thin"> ahead of hackathons.</span></h5>
       </div>
+      <form action="people.html">
       <div class="col s4 offset grey darken-4 hoverable" id="login-register">
         <div class="input-field">
           <i class="material-icons prefix">email</i>
@@ -24,7 +24,7 @@
         </div>
         <div class="input-field">
           <i class="material-icons prefix">lock</i>
-          <input id="password" type="text" class="validate">
+          <input id="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
         <div style="margin: auto;">
@@ -33,6 +33,7 @@
         </button>
         <a class="waves-effect waves-light btn-large modal-trigger" href="#register"><i class="material-icons right">supervisor_account</i>Register</a>
       </div>
+    </form>
         <div id="register" class="modal grey darken-4">
           <div class="modal-content">
             <div class="row">
@@ -55,6 +56,21 @@
               <i class="material-icons prefix">lock</i>
               <input id="password" type="text" class="validate">
               <label for="password">Password</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input id="confirm-password" type="text" class="validate">
+              <label for="confirm-password">Confirm Password</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">phone</i>
+              <input id="phone" type="text" class="validate">
+              <label for="phone">Phone</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">my_location</i>
+              <input id="github" type="text" class="validate">
+              <label for="github">Github Username</label>
             </div>
             <div id="developer" class="left-align">
               <h6>I am a ...</h6>
@@ -119,8 +135,8 @@
             </div>
             <div class="row">
               <div class="col s4">
-                <input type="checkbox" id="phython" />
-                <label for="python">Phython</label>
+                <input type="checkbox" id="python" />
+                <label for="python">Python</label>
               </div>
               <div class="col s4">
                 <input type="checkbox" id="java" />
@@ -164,6 +180,7 @@
   <script src="js/init.js"></script>
   <script>
     $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
       $('.modal-trigger').leanModal();
     });
 </script>
