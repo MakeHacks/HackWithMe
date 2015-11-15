@@ -8,33 +8,39 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="css/animate.css">
 </head>
-<<<<<<< HEAD
-<body ng-app="app" ng-controller="MainController as main" id="background">
+  <body ng-app="app" ng-controller="MainController as main" id="background">
   <div class="wrapper" id="login">
-    <div class="row" style="margin-top: 4%;">
-      <div class="col s5 offset-s1">
+    <div class="row">
+      <div class="col s5 offset-s1" style="margin-top: 10%;">
         <h1 style="text-align: center;">App Name</h1>
       </div>
-      <div class="col s5">
-        <div class="input-field col s5">
+      <div class="col s4 offset" style="margin-top: 15%;">
+        <div class="input-field">
           <i class="material-icons prefix">email</i>
           <input id="email" type="text" class="validate">
           <label for="password">Email</label>
         </div>
-        <div class="input-field col s4 offset-s4">
+        <div class="input-field">
           <i class="material-icons prefix">lock</i>
           <input id="password" type="text" class="validate">
           <label for="password">Password</label>
+        </div>
+        <button class="btn waves-effect waves-light btn-large" type="submit" name="action" style="text-align: center;">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <a class="waves-effect waves-light btn-large modal-trigger" href="#register"><i class="material-icons right">supervisor_account</i>Register</a>
+        <div id="register" class="modal">
+          <div class="modal-content">
+            <h4>Register</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
           </div>
       </div>
-
-    </div>
-    <div class="row">
-    </div>
-    <div class="row">
-
     </div>
   </div>
+</div>
 
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://ajax.googleapiscom/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
