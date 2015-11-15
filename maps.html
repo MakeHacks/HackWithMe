@@ -26,10 +26,27 @@
       };
       map = new google.maps.Map($('#map')[0], myOptions);
 
-      var cities = ["San Jose", "Sacramento", "Mountain View", "Sunnyvale", "Cupertino", "Roseville", "Oakland California", "Elk Grove", "Plesanton", "San Mateo", "Palo Alto", "Davis"];
-      var names= ["John Doe", "Justin Wu", "Joseph Stone", "Stephanie Blossom", "Jonah Smith", "George Blake", "Benjamin Arnold", "Lauren Cooper", "James Key", "Tom Tucker", "Raj Patel", "Cindy Lopez"];
-
+      var cities = ["Mountain View", "Sunnyvale", "Cupertino", "Roseville", "Oakland California", "Elk Grove", "Plesanton", "Palo Alto", "Davis", "San Jose"];
+      var names= ["Joseph Stone", "Stephanie Blossom", "Jonah Smith", "George Blake", "Benjamin Arnold", "Lauren Cooper", "James Key", "Raj Patel", "Cindy Lopez", "Mac Linerven"];
+      var imageio = {
+        url: 'http://www.jacksontransit.com/images/icon-pin2.png',
+        size: new google.maps.Size(32, 32),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(0, 32)
+      }
       for (var x = 0; x < cities.length; x++) {
+        if(x == cities.length - 1) {
+          $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+cities[x]+'&sensor=false', null, function (data) {
+              var p = data.results[0].geometry.location
+              var latlng = new google.maps.LatLng(p.lat, p.lng);
+              new google.maps.Marker({
+                  position: latlng,
+                  map: map,
+                  icon: imageio
+              });
+          });
+        }
+        else {
           $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+cities[x]+'&sensor=false', null, function (data) {
               var p = data.results[0].geometry.location
               var latlng = new google.maps.LatLng(p.lat, p.lng);
@@ -38,10 +55,9 @@
                   map: map,
                   title: names[x]
               });
-
           });
+        }
       }
-
   });
   </script>
     <link rel="icon" type="image/png"
