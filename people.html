@@ -29,8 +29,8 @@
   </nav>
 
   <div class="row">
-    <div class=" card col l12 shrink" style = "">
-         <form class="col s12">
+    <div class=" card col l12 s12 m12 shrink" style = "">
+        <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">search_circle</i>
@@ -41,12 +41,12 @@
     </form>
 
     </div>
-    <div class="col l12">
+    <div class="col l12 s12 m12">
       <ul class="collection">
-        <li class="collection-item avatar" ng-repeat="person in main.people | filter: {tags: main.searchInput}" >
+        <li class="collection-item avatar" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput} " >
           <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
           <div style="margin-left:30px">
-            <span class="title">{{person.name}}</span>
+            <span class="title">{{person.name}} - {{person.distance}} Miles Away</span>
              <p><div class="chip" ng-repeat="tag in person.tags">{{tag}}</div></p>
             <a href="#!" class="btn secondary-content"  onclick="Materialize.toast('Notified', 1000);$(this).closest('li').remove();" >Notify</a>
             {{person.hidden}}
