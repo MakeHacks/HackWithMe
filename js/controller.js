@@ -170,7 +170,7 @@ angular.module('app').controller("MainController", function(){
           	distance: 16,
           	address: 'Walnut Creek',
           	hackathons: [
-            	'MakeHacks', 'TeenTechSF', 'HackingEDU'
+            	'MakeHacks', 'HackingEDU'
             ]
 		},
 		              {
