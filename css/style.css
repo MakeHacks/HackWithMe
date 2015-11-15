@@ -21,9 +21,13 @@
 }
 
 body#background {
-  background: url('../images/code.jpg') no-repeat 50% 50% fixed;
+  background: url('../images/code-blur.jpg') no-repeat 50% 50% fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+}
+
+#login {
+  color: #fff;
 }
