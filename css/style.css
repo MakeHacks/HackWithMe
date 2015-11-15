@@ -19,3 +19,11 @@
 	-ms-transform:scale(0.95);
 	transform:scale(0.95);
 }
+
+body#background {
+  background: url('../images/code.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
