@@ -26,6 +26,7 @@ angular.module('app').controller("MainController", function(){
             email: 'johndoe@johndoe.com',
             phone: '555-555-5555',
             distance: 50,
+            address: 'San Jose',
             hackathons: [
             	'HackingEDU', 'TeenTechSF'
             ]
@@ -41,6 +42,7 @@ angular.module('app').controller("MainController", function(){
           	email: 'bsmith12345@gmail.com',
           	phone: '555-555-5555',
          	distance: 11,
+         	address: 'Sacramento',
          	hackathons: [
             	'MakeHacks', 'TeenTechSF'
             ]
@@ -56,6 +58,7 @@ angular.module('app').controller("MainController", function(){
             email: 'jjstone111222@hotmail.com',
             phone: '555-555-5555',
             distance: 9,
+            address: 'Mountain View',
             hackathons: [
             	'HackingEDU'
             ]
@@ -71,6 +74,7 @@ angular.module('app').controller("MainController", function(){
           	email: '',
           	phone: '555-555-5555',
           	distance: 3,
+          	address: 'Sunnyvale',
           	hackathons: [
             	'TeenTechSF'
             ]
@@ -86,6 +90,7 @@ angular.module('app').controller("MainController", function(){
          	email: '',
          	phone: '555-555-5555',
           	distance: 18,
+          	address: 'Cupertino',
           	hackathons: [
             	'HackingEDU', 'MakeHacks', 'TeenTechSF'
             ]
@@ -100,6 +105,7 @@ angular.module('app').controller("MainController", function(){
          	email: '',
           	phone: '555-555-5555',
           	distance: 30,
+          	address: 'Roseville',
           	hackathons: [
             	'HackingEDU', 'MakeHacks', 'TeenTechSF'
             ]
@@ -115,6 +121,7 @@ angular.module('app').controller("MainController", function(){
           	email: 'ben@benejaminarnold.net',
           	phone: '555-555-5555',
           	distance: 20,
+          	address: 'Oakland',
           	hackathons: [
             	'HackingEDU'
             ]
@@ -129,6 +136,7 @@ angular.module('app').controller("MainController", function(){
           	email: 'lauren.cooper@gmail.com',
           	phone: '555-555-5555',
           	distance: 7,
+          	address: 'Elk Grove',
           	hackathons: [
             	'TeenTechSF'
             ]
@@ -144,6 +152,7 @@ angular.module('app').controller("MainController", function(){
           	email: 'james.key@student.owsd.us',
          	phone: '555-555-5555',
           	distance: 6,
+          	address: 'Plesanton',
           	hackathons: [
             	'MakeHacks', 'TeenTechSF'
             ]

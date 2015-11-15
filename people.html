@@ -61,6 +61,19 @@
         </li>
       </ul>
   </div>
+   <div class="col l12 s12 m12" style="z-index:-1">
+      <ul class="collection">
+        <li class="collection-item avatar" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput, hackathons: main.hackathonInput}" >
+          <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
+          <div style="margin-left:30px">
+            <span class="title">{{person.name}} - {{person.distance}} Miles Away</span>
+             <p><div class="chip tag" ng-repeat="tag in person.tags">{{tag}}</div></p>
+            <a href="#!" class="btn secondary-content waves-effect waves-light" style="z-index:0;"  onclick="Materialize.toast('Notified', 1000);$(this).closest('li').remove();" >Notify</a>
+            {{person.hidden}}
+          </div>
+        </li>
+      </ul>
+  </div>
   <div>
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -68,7 +81,6 @@
 <script src="js/app.js"></script>
 <script src="js/controller.js"></script>
 <script src="js/materialize.js"></script>
-<script type="text/javascript" src="https://www.moxtra.com/api/js/moxtra-latest.js" id="moxtrajs" ></script>s
 <script src="js/init.js"></script>
 </body>
 </html>
