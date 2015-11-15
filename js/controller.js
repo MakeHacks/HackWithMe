@@ -5,7 +5,17 @@ angular.module('app').controller("MainController", function(){
 		{
 			name: 'Lorem Ipsum',
 			img: '',
-			language: '',
+			tags: [
+				'Javascript', 'Html', 'CSS'
+			],
+			github: ''
+		},
+		{
+			name: 'Ipsum Dolor',
+			img: '',
+			tags: [
+				'Html', 'CSS'
+			],
 			github: ''
 		}
 	];
