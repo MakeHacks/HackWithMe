@@ -37,7 +37,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'Joseph Stone',
 			img: 'http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg',
 			tags: [
-				'Ruby', 'Html', 'C++" 
+				'Ruby', 'Html', 'C++' 
 			],
 			github: 'jjstone111222',
                               email: 'jjstone111222@hotmail.com',
@@ -47,7 +47,7 @@ angular.module('app').controller("MainController", function(){
               
               {
 			name: 'Stephanie Blossom',
-			img: 'http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg',
+			img: "http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg",
 			tags: [
 				'Javascript', 'JQuery', 
 			],
@@ -59,7 +59,7 @@ angular.module('app').controller("MainController", function(){
               
               {
 			name: 'Jonah Smith',
-			img: 'http://www.morganstanley.com/assets/images/people/tiles/adam-parker-large.jpg',
+			img: "http://www.morganstanley.com/assets/images/people/tiles/adam-parker-large.jpg",
 			tags: [
 				'AngularJS', 'Html', 'CSS', "Frameworks"
 			],
@@ -70,7 +70,7 @@ angular.module('app').controller("MainController", function(){
 		},
               {
 			name: 'George J. Blake',
-			img: 'http://bestpetvacuumhub.com/wp-content/uploads/2015/05/Sacca_profile_400x400.jpg',
+			img: "http://bestpetvacuumhub.com/wp-content/uploads/2015/05/Sacca_profile_400x400.jpg",
 			tags: [
 				'C', 'Html', 'CSS', 'Perl'
 			],
@@ -82,7 +82,7 @@ angular.module('app').controller("MainController", function(){
               
               {
 			name: 'Benjamin Arnold',
-			img: 'https://cap.stanford.edu/profiles/viewImage?profileId=41457&type=square',
+			img: "https://cap.stanford.edu/profiles/viewImage?profileId=41457&type=square",
 			tags: [
 				'Html', 'CSS'
 			],
@@ -93,7 +93,7 @@ angular.module('app').controller("MainController", function(){
 		},
               {
 			name: 'Lauren Cooper',
-			img: 'https://static.licdn.com/scds/common/u/images/apps/plato/home/photo_profile_headshot_200x200_v2.jpg',
+			img: "https://static.licdn.com/scds/common/u/images/apps/plato/home/photo_profile_headshot_200x200_v2.jpg",
 			tags: [
 				'APIs', 'Mobile', 'Swift'
 			],
@@ -105,7 +105,7 @@ angular.module('app').controller("MainController", function(){
               
               {
 			name: 'James Francisco Key',
-			img: 'http://www.beatpennystocks.com/wp-content/uploads/2013/06/profile_face_small_normal.jpg',
+			img: "http://www.beatpennystocks.com/wp-content/uploads/2013/06/profile_face_small_normal.jpg",
 			tags: [
 				'SDKs', 'Android', 'Mobile'
 			],
