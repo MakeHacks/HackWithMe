@@ -6,10 +6,82 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="css/animate.css">
+
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyA-NoY29NaRKFxt0eUXEkj3TvG4cQlOp-k&sensor=true"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/materialize.js"></script>
+   <script src="js/node.js"></script>
+  <script src="js/Twilio.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+  var map;
+ var marker;
+
+ function searchAddress() {
+
+   var addressInput = document.getElementById('address');
+   console.log(addressInput);
+   var geocoder = new google.maps.Geocoder();
+
+   geocoder.geocode({address: addressInput}, function(results, status) {
+
+     if (status == google.maps.GeocoderStatus.OK) {
+
+       var myResult = results[0].geometry.location; // reference LatLng value
+
+       createMarker(myResult); // call the function that adds the marker
+
+       map.setCenter(myResult);
+
+       map.setZoom(17);
+
+     } else { // if status value is not equal to "google.maps.GeocoderStatus.OK"
+
+     // warning message
+     alert("The Geocode was not successful for the following reason: " + status);
+
+   }
+   });
+}
+   function removeDummy() {
+     var elem = document.getElementById('address');
+     elem.parentNode.removeChild(elem);
+     return false;
+ }
+
+
+ function createMarker(latlng) {
+
+    // If the user makes another search you must clear the marker variable
+    if(marker != undefined && marker != ''){
+     marker.setMap(null);
+     marker = '';
+    }
+
+    marker = new google.maps.Marker({
+       map: map,
+       position: latlng
+    });
+
+ }
+
+ function initialize() {
+   var mapOptions = {
+     center: new google.maps.LatLng(40.680898,-8.684059),
+     zoom: 11,
+     mapTypeId: google.maps.MapTypeId.ROADMAP
+   };
+   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+ }
+ google.maps.event.addDomListener(window, "load", initialize);
+  </script>
     <link rel="icon" type="image/png"
        href="images/favicon.ico" />
 </head>
-<body>
+<body ng-app="app" ng-controller="MainController as main">
   <div class="navbar-fixed">
   <nav class="red" role="navigation">
      <div class="nav-wrapper container" id="navbar">
@@ -30,80 +102,19 @@
      </div>
    </nav>
  </div>
+
+ <div>
+   <ul class="collection">
+     <li class="collection-item avatar" ng-repeat="person in main.people" >
+       <p id="address">{{person.address}}</p>
+         <script>
+            searchAddress();
+         </script>
+     </li>
+   </ul>
+ </div>
+
    <div id="map"></div>
 
- <script src="http://maps.google.com/maps/api/js?key=AIzaSyA-NoY29NaRKFxt0eUXEkj3TvG4cQlOp-k&sensor=true"></script>
- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
- <script src="js/app.js"></script>
- <script src="js/controller.js"></script>
- <script src="js/materialize.js"></script>
-  <script src="js/node.js"></script>
- <script src="js/Twilio.js"></script>
- <script src="js/init.js"></script>
- <script>
- function writeAddressName(latLng) {
-         var geocoder = new google.maps.Geocoder();
-         geocoder.geocode({
-           "location": latLng
-         },
-         function(results, status) {
-           if (status == google.maps.GeocoderStatus.OK)
-             document.getElementById("address").innerHTML = results[0].formatted_address;
-           else
-             document.getElementById("error").innerHTML += "Unable to retrieve your address" + "<br />";
-         });
-       }
-
-       function geolocationSuccess(position) {
-         var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-         // Write the formatted address
-         writeAddressName(userLatLng);
-
-         var myOptions = {
-           zoom : 16,
-           center : userLatLng,
-           mapTypeId : google.maps.MapTypeId.ROADMAP
-         };
-         // Draw the map
-         var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
-         // Place the marker
-         new google.maps.Marker({
-           map: mapObject,
-           position: userLatLng
-         });
-         // Draw a circle around the user position to have an idea of the current localization accuracy
-         var circle = new google.maps.Circle({
-           center: userLatLng,
-           radius: position.coords.accuracy,
-           map: mapObject,
-           fillColor: '#0000FF',
-           fillOpacity: 0.5,
-           strokeColor: '#0000FF',
-           strokeOpacity: 1.0
-         });
-         mapObject.fitBounds(circle.getBounds());
-       }
-
-       function geolocationError(positionError) {
-         document.getElementById("map").innerHTML += "Error: " + positionError.message + "<br />";
-       }
-
-       function geolocateUser() {
-         // If the browser supports the Geolocation API
-         if (navigator.geolocation)
-         {
-           var positionOptions = {
-             enableHighAccuracy: true,
-             timeout: 10 * 1000 // 10 seconds
-           };
-           navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, positionOptions);
-         }
-         else
-           document.getElementById("error").innerHTML += "Your browser doesn't support the Geolocation API";
-       }
-
-       window.onload = geolocateUser;
- </script>
  </body>
  </html>

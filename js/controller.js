@@ -1,11 +1,11 @@
 //Resource: RevillWeb AngularJS in 30 minutes tutorial
-//http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/ 
+//http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/
 angular.module('app').controller("MainController", function(){
 	var vm = this;
 	vm.searchInput = '';
 	vm.hackathonInput = '';
 	vm.gridView = false;
-	vm.hackathonList = [	
+	vm.hackathonList = [
 		{
 			name: 'HackingEDU'
 		},
@@ -32,7 +32,7 @@ angular.module('app').controller("MainController", function(){
             	'HackingEDU', 'TeenTechSF'
             ]
 		},
-              
+
 		{
 			name: 'Justin Wu',
 			img: 'https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg',
@@ -48,12 +48,12 @@ angular.module('app').controller("MainController", function(){
             	'MakeHacks', 'TeenTechSF'
             ]
 		},
-              
+
               {
 			name: 'Joseph Stone',
 			img: 'http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg',
 			tags: [
-				'Ruby', 'Rails', 'Javascript', 'C++' 
+				'Ruby', 'Rails', 'Javascript', 'C++'
 			],
 			github: 'jjstone111222',
             email: 'jjstone111222@hotmail.com',
@@ -64,12 +64,12 @@ angular.module('app').controller("MainController", function(){
             	'HackingEDU'
             ]
 		},
-              
+
               {
 			name: 'Stephanie Blossom',
 			img: "http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg",
 			tags: [
-				'Javascript', 'JQuery', 'HTML' 
+				'Javascript', 'JQuery', 'HTML'
 			],
 			github: '',
           	email: '',
@@ -80,7 +80,7 @@ angular.module('app').controller("MainController", function(){
             	'TeenTechSF'
             ]
 		},
-              
+
               {
 			name: 'Jonah Smith',
 			img: "http://www.morganstanley.com/assets/images/people/tiles/adam-parker-large.jpg",
@@ -111,7 +111,7 @@ angular.module('app').controller("MainController", function(){
             	'HackingEDU', 'MakeHacks', 'TeenTechSF'
             ]
 		},
-              
+
               {
 			name: 'Benjamin Arnold',
 			img: "https://cap.stanford.edu/profiles/viewImage?profileId=41457&type=square",
@@ -142,7 +142,7 @@ angular.module('app').controller("MainController", function(){
             	'TeenTechSF'
             ]
 		},
-              
+
               {
 			name: 'James Key',
 			img: "http://www.beatpennystocks.com/wp-content/uploads/2013/06/profile_face_small_normal.jpg",
@@ -158,8 +158,8 @@ angular.module('app').controller("MainController", function(){
             	'MakeHacks', 'TeenTechSF'
             ]
 		},
-              
 
-              
+
+
 	];
 });
