@@ -68,6 +68,6 @@ span .medium {
   padding-top: 1%;
 }
 
-#active {
-  color: #ad1457;
+.tag {
+  margin-left: 8px;
 }
