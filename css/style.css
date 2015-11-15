@@ -67,3 +67,7 @@ span .medium {
 #search {
   padding-top: 1%;
 }
+
+#active {
+  color: #ad1457;
+}
