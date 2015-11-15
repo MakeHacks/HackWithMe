@@ -9,12 +9,14 @@
   <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
+  <div class="navbar-fixed">
   <nav class="red" role="navigation">
-     <div class="nav-wrapper container" id="navbar"><a id="logo-container" href="#" class="brand-logo">Hack With Me</a>
+     <div class="nav-wrapper container" id="navbar">
+       <a href="#" class="brand-logo">Hack With Me</a>
        <ul class="right hide-on-med-and-down">
-         <li class="waves-effect waves-light"><a href="people.html">Members</a></li>
-         <li class="red darken-3 waves-effect waves-light"><a href="#" class="waves-effect waves-light">Profile</a></li>
-         <li class="waves-effect waves-light"><a href="login.html">Log Out</a></li>
+         <li class="waves-effect waves-light"><a href="people.html"><i class="material-icons left">view_module</i>Members</a></li>
+         <li class="red darken-3 waves-effect waves-light"><a href="#" class="waves-effect waves-light"><i class="material-icons left">picture_in_picture</i>Profile</a></li>
+         <li class="waves-effect waves-light"><a href="login.html"><i class="material-icons left">done</i>Log Out</a></li>
        </ul>
        <ul id="nav-mobile" class="side-nav">
          <li><a href="people.html">Members</a></li>
@@ -25,6 +27,7 @@
        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
      </div>
    </nav>
+ </div>
 
    <div id="profile">
      <form action="people.html">
@@ -64,8 +67,13 @@
            <label for="github">Github Username</label>
          </div>
        </div>
+       <div class="input-field col s6">
+         <i class="material-icons prefix">location_on</i>
+         <input id="address" type="text" class="validate">
+         <label for="address">Address</label>
+       </div>
          <div id="developer" class="left-align">
-           <h5>I am a ...</h5>
+           <h5>I am a...</h5>
            <div class="row">
              <div class="col s4">
              <input type="checkbox" id="full-stack" />
@@ -96,7 +104,7 @@
          </div>
        </div>
        <div id="interest" class="left-align">
-         <h5>I am experienced in ...</h5>
+         <h5>I am experienced in...</h5>
          <div class="row">
            <div class="col s4">
              <input type="checkbox" id="js" />

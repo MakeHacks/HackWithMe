@@ -9,23 +9,24 @@
   <link rel="stylesheet" href="css/animate.css">
 </head>
 <body ng-app="app" ng-controller="MainController as main">
+  <div class="navbar-fixed">
 	<nav class="red" role="navigation">
     <div class="nav-wrapper container" id="navbar"><a id="logo-container" href="#" class="brand-logo">Hack With Me</a>
       <ul class="right hide-on-med-and-down">
-        <li class="red darken-3 waves-effect waves-light"><a href="#">Members</a></li>
-        <li class="waves-effect waves-light"><a href="profile.html" class="waves-effect waves-light">Profile</a></li>
-        <li class="waves-effect waves-light"><a href="login.html">Log Out</a></li>
+        <li class="red darken-3 waves-effect waves-light"><a href="#"><i class="material-icons left">view_module</i>Members</a></li>
+        <li class="waves-effect waves-light"><a href="profile.html" class="waves-effect waves-light"><i class="material-icons left">picture_in_picture</i>Profile</a></li>
+        <li class="waves-effect waves-light"><a href="login.html"><i class="material-icons left">done</i>Log Out</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="people.html">Members</a></li>
-        <li><a href="map.html">Map</a></li>
+        <li><a href="people.html"><i class="material-icons left">view_module</i>Members</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="#">Log Out</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+</div>
 
   <div class="row">
     <div class=" card col l12 s12 m12 shrink" style = "z-index:3000;">
