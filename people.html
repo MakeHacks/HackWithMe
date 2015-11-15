@@ -12,28 +12,44 @@
 	<nav class="deep-purple darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Hack With Me</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="people.html">Members</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#">Log Out</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="people.html">Members</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#">Log Out</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
   <div class="row">
-    <div class=" card col l3" style = "height:85vh">
-      
+    <div class=" card col l12 shrink" style = "">
+         <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">search_circle</i>
+          <input id="icon_prefix" type="text" class="validate" ng-model="main.searchInput">
+          <label for="icon_prefix">Search Tag</label>
+        </div>
+      </div>
+    </form>
+
     </div>
-    <div class="col l9">
+    <div class="col l12">
       <ul class="collection">
-        <li class="collection-item avatar" ng-repeat="person in main.people">
+        <li class="collection-item avatar" ng-repeat="person in main.people | filter: {tags: main.searchInput}" >
           <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
           <div style="margin-left:30px">
-            <span class="title">{{person.name}} </span>
+            <span class="title">{{person.name}}</span>
              <p><div class="chip" ng-repeat="tag in person.tags">{{tag}}</div></p>
-            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            <a href="#!" class="btn secondary-content"  onclick="Materialize.toast('Notified', 1000);$(this).closest('li').remove();" >Notify</a>
+            {{person.hidden}}
           </div>
         </li>
       </ul>

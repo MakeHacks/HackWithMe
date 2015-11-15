@@ -19,7 +19,10 @@ angular.module('app').controller("MainController", function(){
 			tags: [
 				'Html', 'CSS'
 			],
-			github: ''
+			github: '',
+                            email: '',
+                              phone: '',
+                              city: '',
 		},
               {
 			name: 'Joseph Stone',
