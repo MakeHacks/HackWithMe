@@ -20,10 +20,17 @@ angular.module('app').controller("MainController", function(){
 			tags: [
 				'Html', 'CSS'
 			],
+
 			github: 'bsmith123123',
                               email: 'bsmith12345@gmail.com',
                               phone: '555-555-5555',
                               distance: '11 miles',
+
+			github: '',
+                            email: '',
+                              phone: '',
+                              city: '',
+
 		},
               
               {
