@@ -84,3 +84,13 @@ span .medium {
   text-align: center;
   padding: 2% 6% 3% 6%;
 }
+
+#map-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+#googleMap {
+  height: 300px;
+  width: 100%;
+}
