@@ -23,13 +23,13 @@
   </nav>
 
   <div class="row">
-    <div class=" card col l3" style = "height:90vh">
+    <div class=" card col l3" style = "height:85vh">
       
     </div>
     <div class="col l9">
       <ul class="collection">
         <li class="collection-item avatar" ng-repeat="person in main.people">
-          <img src="https://placehold.it/500x500" alt="" style="height:80%; width:auto;"class="circle">
+          <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
           <div style="margin-left:30px">
             <span class="title">{{person.name}} </span>
              <p><div class="chip" ng-repeat="tag in person.tags">{{tag}}</div></p>
