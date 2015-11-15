@@ -71,3 +71,12 @@ span .medium {
 .tag {
   margin-left: 8px;
 }
+
+#interest {
+  margin-top: 2%;
+}
+
+#profile {
+  text-align: center;
+  padding: 2% 4% 3% 4%;
+}
