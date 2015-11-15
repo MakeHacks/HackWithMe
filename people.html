@@ -38,17 +38,21 @@
           <input id="icon_prefix" type="text" class="validate" ng-model="main.searchInput">
           <label for="icon_prefix">Search Tag</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s3">
           <select ng-model="main.hackathonInput">
             <option value="" disabled selected>Choose your option</option>
             <option   ng-repeat="hackathon in main.hackathonList">{{hackathon.name}}</option>
           </select>
           <label>Select Hackathon</label>
-  </div>
+        </div>
+        <div clas="col s1">
+        <a href="#"><i class="material-icons medium right black-text" ng-hide="main.gridView === true;" ng-click="main.gridView = true;$scope.$apply();">view_module</i></a>
+                <a href="#"><i class="material-icons medium right black-text" ng-show="main.gridView === true;" ng-click="main.gridView = false;$scope.$apply();">view_list</i></a>
+        </div>
       </div>
     </form>
     </div>
-    <div class="col l12 s12 m12" style="z-index:-1">
+    <div class="col l12 s12 m12" ng-hide="main.gridView === true" style="z-index:-1">
       <ul class="collection">
         <li class="collection-item avatar" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput, hackathons: main.hackathonInput}" >
           <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
@@ -61,18 +65,23 @@
         </li>
       </ul>
   </div>
-   <div class="col l12 s12 m12" style="z-index:-1">
-      <ul class="collection">
-        <li class="collection-item avatar" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput, hackathons: main.hackathonInput}" >
-          <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
-          <div style="margin-left:30px">
-            <span class="title">{{person.name}} - {{person.distance}} Miles Away</span>
-             <p><div class="chip tag" ng-repeat="tag in person.tags">{{tag}}</div></p>
-            <a href="#!" class="btn secondary-content waves-effect waves-light" style="z-index:0;"  onclick="Materialize.toast('Notified', 1000);$(this).closest('li').remove();" >Notify</a>
-            {{person.hidden}}
+   <div class="col l12 s12 m12" ng-show="main.gridView === true" style="z-index:-1">
+     <div class="row">
+          <div class="col l2 parent" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput, hackathons: main.hackathonInput}">
+            <div class="card medium">
+              <div class="card-image">
+                <img ng-src="{{person.img}}">
+              </div>
+              <div class="card-content">
+                <p style="font-size:120%">{{person.name}}</p>
+                <p><div class="chip tag" ng-repeat="tag in person.tags">{{tag}}</div></p>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light" style="z-index:0;"  onclick="Materialize.toast('Notified', 1000);$(this).closest('.parent').remove();">Notify</a>
+              </div>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
   </div>
   <div>
 

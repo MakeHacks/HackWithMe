@@ -4,6 +4,7 @@ angular.module('app').controller("MainController", function(){
 	var vm = this;
 	vm.searchInput = '';
 	vm.hackathonInput = '';
+	vm.gridView = false;
 	vm.hackathonList = [	
 		{
 			name: 'HackingEDU'
@@ -20,7 +21,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'John Doe',
 			img: 'https://lh5.googleusercontent.com/-ZadaXoUTBfs/AAAAAAAAAAI/AAAAAAAAAGA/19US52OmBqc/photo.jpg',
 			tags: [
-				'Javascript', 'Html', 'CSS', 'Front End'
+				'Javascript', 'HTML', 'CSS'
 			],
 			github: 'johndoe12345',
             email: 'johndoe@johndoe.com',
@@ -36,7 +37,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'Justin Wu',
 			img: 'https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg',
 			tags: [
-				'Html', 'CSS'
+				'HTML', 'CSS', 'AngularJS'
 			],
 			github: 'bsmith123123',
           	email: 'bsmith12345@gmail.com',
@@ -52,7 +53,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'Joseph Stone',
 			img: 'http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg',
 			tags: [
-				'Ruby', 'Rails', 'Javascript', 'Html', 'CSS', 'C++' 
+				'Ruby', 'Rails', 'Javascript', 'C++' 
 			],
 			github: 'jjstone111222',
             email: 'jjstone111222@hotmail.com',
@@ -68,7 +69,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'Stephanie Blossom',
 			img: "http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg",
 			tags: [
-				'Javascript', 'JQuery', 
+				'Javascript', 'JQuery', 'HTML' 
 			],
 			github: '',
           	email: '',
@@ -84,7 +85,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'Jonah Smith',
 			img: "http://www.morganstanley.com/assets/images/people/tiles/adam-parker-large.jpg",
 			tags: [
-				'AngularJS', 'Html', 'CSS', "Bootstrap"
+				'AngularJS', 'HTML', 'CSS', "Bootstrap"
 			],
 			github: '',
          	email: '',
@@ -96,10 +97,10 @@ angular.module('app').controller("MainController", function(){
             ]
 		},
               {
-			name: 'George J. Blake',
+			name: 'George Blake',
 			img: "http://bestpetvacuumhub.com/wp-content/uploads/2015/05/Sacca_profile_400x400.jpg",
 			tags: [
-				'C', 'Html', 'CSS', 'Perl'
+				'C', 'HTML', 'CSS', 'Perl'
 			],
 			github: '',
          	email: '',
@@ -115,7 +116,7 @@ angular.module('app').controller("MainController", function(){
 			name: 'Benjamin Arnold',
 			img: "https://cap.stanford.edu/profiles/viewImage?profileId=41457&type=square",
 			tags: [
-				'Html', 'CSS'
+				'HTML', 'CSS', 'Bootstrap'
 			],
 			github: 'BAcodeweb01010',
           	email: 'ben@benejaminarnold.net',
@@ -143,10 +144,10 @@ angular.module('app').controller("MainController", function(){
 		},
               
               {
-			name: 'James Francisco Key',
+			name: 'James Key',
 			img: "http://www.beatpennystocks.com/wp-content/uploads/2013/06/profile_face_small_normal.jpg",
 			tags: [
-				'Phonegap', 'Html', 'CSS', 'Android', 'Mobile'
+				'Phonegap', 'HTML', 'CSS', 'Android'
 			],
 			github: 'lockandkey51',
           	email: 'james.key@student.owsd.us',
