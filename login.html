@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Hack With Me</title>
+    <title>HackWithMe</title>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -12,9 +12,14 @@
   <div class="wrapper" id="login">
     <div class="row">
       <div class="col s5 offset-s1" style="margin-top: 10%;">
-        <h1 style="text-align: center;">App Name</h1>
+<<<<<<< HEAD
+        <h1 class="center-align">HackWith<b><i>Me</i></b></h1>
+        <h5 class="center-align">A modern war to connect hacking enthusiasts by helping them comminucate ahead of hackathons. Use HackWithMe to create a dynamic team and find others living nearby to carpool to hackathons!</h5>
+=======
+        <h1 style="text-align: center;">Hackwithme</h1>
+>>>>>>> origin/master
       </div>
-      <div class="col s4 offset grey darken-4" style="margin-top: 15%;">
+      <div class="col s4 offset grey darken-4 hoverable" id="login-register">
         <div class="input-field">
           <i class="material-icons prefix">email</i>
           <input id="email" type="text" class="validate">
@@ -25,10 +30,12 @@
           <input id="password" type="text" class="validate">
           <label for="password">Password</label>
         </div>
+        <div style="margin: auto;">
         <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Login
           <i class="material-icons right">send</i>
         </button>
         <a class="waves-effect waves-light btn-large modal-trigger" href="#register"><i class="material-icons right">supervisor_account</i>Register</a>
+      </div>
         <div id="register" class="modal grey darken-4">
           <div class="modal-content">
             <div class="row">
@@ -52,9 +59,98 @@
               <input id="password" type="text" class="validate">
               <label for="password">Password</label>
             </div>
+            <div id="developer" class="left-align">
+              <h6>I am a ...</h6>
+              <div class="row">
+                <div class="col s4">
+                <input type="checkbox" id="full-stack" />
+                <label for="full-stack">Full-stack Developer</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="front-end" />
+                <label for="front-end">Front-end Developer</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="back-end" />
+                <label for="back-end">Back-end Developer</label>
+              </div>
+            </div>
+            <div class="row left-align">
+              <div class="col s4">
+                <input type="checkbox" id="game-developer" />
+                <label for="game-developer">Game Developer</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="mobile-developer" />
+                <label for="mobile-developer">Mobile Developer</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="designer" />
+                <label for="designer">Designer</label>
+              </div>
+            </div>
           </div>
-          <div id="register-button" class="col s4 offset-s4">
-            <button class="modal-action modal-close waves-effect waves-light btn-large" type="submit" name="action">Register
+          <div id="interest" class="left-align">
+            <h6>I am experienced in ...</h6>
+            <div class="row">
+              <div class="col s4">
+                <input type="checkbox" id="js" />
+                <label for="js">Javascript</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="css" />
+                <label for="css">CSS</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="html" />
+                <label for="html">HTML5</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s4">
+                <input type="checkbox" id="php" />
+                <label for="php">PHP</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="jquery" />
+                <label for="jquery">jQuery</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="ios" />
+                <label for="ios">iOS</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s4">
+                <input type="checkbox" id="phython" />
+                <label for="python">Phython</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="java" />
+                <label for="java">Java</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="android" />
+                <label for="android">Android</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s4">
+                <input type="checkbox" id="node.js" />
+                <label for="node.js">Node.JS</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="ruby" />
+                <label for="ruby">Ruby</label>
+              </div>
+              <div class="col s4">
+                <input type="checkbox" id="mongodb" />
+                <label for="mongodb">MongoDB</label>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center">
+            <button class="modal-action modal-close waves-effect waves-light btn-large valign" type="submit" name="action" style="margin: auto;">Register
               <i class="material-icons right">send</i>
             </button>
           </div>
