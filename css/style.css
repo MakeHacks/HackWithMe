@@ -63,3 +63,7 @@ body#background {
 span .medium {
   font-weight: 400;
 }
+
+#search {
+  padding-top: 1%;
+}
