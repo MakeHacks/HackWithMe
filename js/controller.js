@@ -115,3 +115,8 @@ angular.module('app').controller("MainController", function(){
               
 	];
 });
+
+angular.module('app').controller("MainController", function(){
+	var vm = this;
+	vm.searchInput = 'Test';
+});
