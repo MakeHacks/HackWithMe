@@ -56,13 +56,13 @@
     </div>
     <div class="col l12 s12 m12" ng-hide="main.gridView === true" style="z-index:-1">
       <ul class="collection">
-        <li class="collection-item avatar" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput, hackathons: main.hackathonInput}" >
+        <li class="collection-item avatar" ng-init="notified = false" ng-repeat="person in main.people | orderBy:'distance' | filter: {tags: main.searchInput, hackathons: main.hackathonInput}" >
           <img ng-src="{{person.img}}" alt="" style="height:80%; width:auto;"class="circle">
           <div style="margin-left:30px">
             <span class="title">{{person.name}} - {{person.distance}} Miles Away</span>
              <p><div class="chip tag" ng-repeat="tag in person.tags">{{tag}}</div></p>
-            <a href="#!" class="btn secondary-content waves-effect waves-light" style="z-index:0;"  onclick="Materialize.toast('Notified', 1000);$(this).closest('li').remove();" >Notify</a>
-            {{person.hidden}}
+            <a href="#!" class="btn secondary-content waves-effect waves-light" ng-click="notified = true"style="z-index:0;"  onclick="Materialize.toast('Notified', 1000);" ng-hide="notified === true" >Notify</a>
+            <a href="#!" class="btn secondary-content disabled"style="z-index:0;" ng-show="notified === true" >Notified </a>
           </div>
         </li>
       </ul>
